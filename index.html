@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AkiliSpa Mental Health Solution</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>✨Welcome to AkiliSpa🧠</h1>
+      <p>Your partner🤝in mental health and well-being💆</p>
+    </header>
+
+    <!-- Toggle Background Button -->
+    <button id="toggleBgBtn">Toggle Background Color</button>
+
+    <!-- Slider for Text Size -->
+    <div class="slider-section">
+      <label for="textSizeSlider">Adjust Info Text Size:</label>
+      <input type="range" id="textSizeSlider" min="14" max="32" value="18">
+      <p id="infoText" class="info-text">Your mental health matters. We are here to help you.</p>
+    </div>
+
+    <!-- Modal Trigger -->
+    <button id="openModalBtn" class="modal-btn">Learn More About Us</button>
+
+    <!-- Modal Structure -->
+    <div id="modal" class="hidden">
+      <div class="overlay"></div>
+      <div class="modal-content">
+        <h2>About AkiliSpa💚</h2>
+        <p>AkiliSpa offers personalized mental health solutions tailored to your needs.</p>
+        <p>😵‍💫😩🎧</p>
+        <button id="closeModalBtn" class="close-modal-btn">Close</button>
+      </div>
+    </div>
+
+    <!-- Form with Validation -->
+    <form id="contactForm" class="contact-form">
+      <h2>Contact Us📞</h2>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Your name" required>
+      <span id="nameError" class="error hidden">Name must be at least 3 characters long.</span>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Your email" required>
+      <span id="emailError" class="error hidden">Enter a valid email address.</span>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" placeholder="Your password" required>
+      <span id="passwordError" class="error hidden">Password must be at least 8 characters, with one uppercase letter and one number.</span>
+
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+
+    <!-- Dropdown -->
+    <div class="dropdown-section">
+      <label for="serviceDropdown">Choose a Service🛠️:</label>
+      <select id="serviceDropdown">
+        <option value="" selected disabled>Select...</option>
+        <option value="Therapy">Therapy Sessions</option>
+        <option value="Meditation">Guided Meditation</option>
+        <option value="Workshops">Mental Health Workshops</option>
+      </select>
+      <p id="dropdownMessage" class="dropdown-message"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
